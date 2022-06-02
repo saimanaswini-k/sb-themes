@@ -2979,8 +2979,11 @@ html[accessable-theme="accessible"] {
 			}
 		}
 
-		.sb-requirement-field span, .infotext {
+		.sb-requirement-field span{
 			color: #9d1b1b !important;
+		}
+		.infotext {
+			color: var(--red) !important;
 		}
 
 		button.sb-btn.sb-btn-normal.w-100.sb-btn-disabled {
