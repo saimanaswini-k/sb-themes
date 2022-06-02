@@ -480,24 +480,50 @@ mat-tooltip-component .mat-tooltip {
             padding-bottom: 0;
         }
 
+        &.mat-form-field-should-float {
+            .mat-form-field-flex {
+                align-items: flex-end;
+            }
+            .mat-select {
+                margin-top: 2px;
+            }
+            .mat-select-arrow-wrapper {
+                transform: translateY(-30%);
+            }
+        }
+
+        .mat-select-arrow-wrapper {
+            transform: translateY(0%);
+        }
+
         .mat-form-field-flex {
             background-color: var(--mat-dropdown-form-bg);
-            padding: 8px 12px 0 16px;
+            // padding: 8px 12px 0 16px;
             border: 1px solid var(--primary-color);
-            border-radius: 4px;
+            border-radius: calculateRem(4px);
+            height: calculateRem(48px);
+            padding: calculateRem(8px) calculateRem(16px);
+            align-items: center;
 
             html[layout='joy'] & {
-                border-radius: 24px;
+                border-radius: calculateRem(24px);
                 border-color: transparent;
             }
         }
 
         .mat-form-field-infix {
-            padding: 0 0 8px 0;
+            padding: 0;
+            border-top: none;
+            // width: 100%;
+            // height: calc(100% - 8px);
         }
 
+        // .mat-select, .mat-select-trigger {
+        //     height: 100%;
+        // }
+
         .mat-select-trigger {
-            height: 20px;
+            height: calculateRem(20px);
         }
 
         .mat-select-value {
@@ -511,6 +537,10 @@ mat-tooltip-component .mat-tooltip {
 
         .mat-form-field-label {
             color: var(--gray-800);
+            margin-bottom: 0;
+            &.mat-form-field-empty {
+                transform: translateY(6px);
+            }
         }
 
         .mat-select-arrow {
@@ -522,7 +552,7 @@ mat-tooltip-component .mat-tooltip {
         }
 
         &.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
-            transform: translateY(-0.59373em) scale(0.7);
+            transform: translateY(-.4em) scale(.7);
             margin-bottom: 0;
         }
 
@@ -563,9 +593,18 @@ mat-tooltip-component .mat-tooltip {
 
         &.mat-form-field-appearance-fill {
 
+            &.mat-form-field-should-float {
+                .mat-form-field-flex {
+                    align-items: center;
+                }
+                .mat-select-arrow-wrapper {
+                    transform: translateY(0%);
+                }
+            }
+
             .mat-form-field-flex {
-                padding: 0 16px;
-                height: 48px;
+                padding: 0 calculateRem(16px);
+                height: calculateRem(48px);
                 display: flex;
                 align-items: center;
                 box-shadow: var(--sbt-box-shadow-6px);
