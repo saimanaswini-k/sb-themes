@@ -369,6 +369,10 @@ mat-tooltip-component .mat-tooltip {
             max-width: 480px;
         }
 
+        &--large {
+            max-width: 56.25rem;
+        }
+
         &--fullscreen {
             max-width: 100%;
             margin: 0 auto;
