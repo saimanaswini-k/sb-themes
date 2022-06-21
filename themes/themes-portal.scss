@@ -187,6 +187,8 @@ html[data-theme='Default'] {
 	--visit-helpcenter-bg: var(--white);
 	--sbfaq-compt-bg: #fff;
 
+	--signup-panel-bg: var(--white);
+
 	.sb-single-resource {
 		.content-video__player {
 			background: var(--white);
@@ -1768,6 +1770,7 @@ html[data-theme=Darkmode] {
 	--quml-info-icon: #000 !important;
 	--quml-close-icon: #fff;
 
+	--signup-panel-bg: var(--sbt-body-bg2);
 
 	app-signup {
 		.sb-checkbox.sb-checkbox-primary label:before {
