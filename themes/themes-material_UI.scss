@@ -689,6 +689,33 @@ mat-tooltip-component .mat-tooltip {
     }
 }
 
+.mat-autocomplete-panel {
+	background: var(--mat-dropdown-form-bg);
+	color: var(--gray-800);
+	.mat-option {
+        color: var(--gray-800);
+        &.mat-selected {
+            &:not(.mat-active) {
+                &:not(:hover) {
+                    &:not(.mat-option-disabled) {
+                        background: var(--mat-dropdown-form-bg);
+                        color: var(--gray-800);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mat-option.mat-selected {
+	&:not(.mat-option-multiple) {
+		&:not(.mat-option-disabled) {
+			background: var(--mat-dropdown-form-bg);
+			color: var(--gray-800);
+		}
+	}
+}
+
 /* Material Select ends here */
 
 
