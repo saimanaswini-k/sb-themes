@@ -1772,6 +1772,11 @@ html[data-theme=Darkmode] {
 
 	--signup-panel-bg: var(--sbt-body-bg2);
 
+	input.sb-form-control:-internal-autofill-selected {
+		color-scheme: dark;
+		box-shadow: 0 0 0 1000px #333 inset;
+	}
+
 	app-signup {
 		.sb-checkbox.sb-checkbox-primary label:before {
 			border-color: var(--primary-color);
