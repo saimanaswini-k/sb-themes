@@ -14,14 +14,14 @@ html[data-theme="JOYFUL"][data-color="aqua"]{
 
     
     --cc-lb-card-stack-btn-bg: var(--app-primary-tint);
-    --cc-sbcard-bg:#FFB74D;
+    --cc-sbcard-bg:#97e9e9;
 
 /* overwrites */
 .sb--card {
   background-color: #fff !important;
 }
-.sb-menu-icon  .tool-icon, ion-tab-button.tab-selected, .profile ion-tabs ion-tab-button.tab-selected ion-icon {
-  filter: invert(55%) sepia(95%) saturate(1893%) hue-rotate(360deg) brightness(101%) contrast(107%);
+.sb-menu-icon .tool-icon, ion-tab-button.tab-selected, .profile ion-tabs ion-tab-button.tab-selected ion-icon {
+  filter: invert(55%) sepia(100%) saturate(1893%) hue-rotate(360deg) brightness(0%) contrast(107%);
 }
 ion-button .tool-icon, .sb-label-grid.sb-box-grid .item .sb-icon-img {
   filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(21deg) brightness(97%) contrast(103%);
