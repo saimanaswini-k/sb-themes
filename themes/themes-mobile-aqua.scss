@@ -11,7 +11,7 @@ html[data-theme="JOYFUL"][data-color="aqua"]{
     --app-primary-header: var(--app-primary);
     --app-primary-header-light: var(--app-primary-tint);
     --app-tertiary-background:#F3F7FB;
-
+    --app-secondary-background: var(--app-primary-tint);
     
     --cc-lb-card-stack-btn-bg: var(--app-primary-tint);
     --cc-sbcard-bg:var(--app-primary-tint);
@@ -20,10 +20,10 @@ html[data-theme="JOYFUL"][data-color="aqua"]{
 .sb--card {
   background-color: #fff !important;
 }
-.sb-menu-icon .tool-icon, ion-tab-button.tab-selected, .profile ion-tabs ion-tab-button.tab-selected ion-icon {
+.sb-menu-icon .tool-icon, ion-tab-button.tab-selected, .profile ion-tabs ion-tab-button.tab-selected ion-icon, .sb-side-menu .sb-menu-list .item ion-icon,img.arrow-icon.animate, .selected-lang .language-selection .icon-check {
   filter: invert(55%) sepia(100%) saturate(1893%) hue-rotate(360deg) brightness(0%) contrast(107%);
 }
-ion-button .tool-icon, .sb-label-grid.sb-box-grid .item .sb-icon-img {
+ion-button .tool-icon, .sb-label-grid.sb-box-grid .item .sb-icon-img,.tutorial-popover .popover-wrapper img.close-icon {
   filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(21deg) brightness(97%) contrast(103%);
 } 
 .sb-label-grid.sb-box-grid .item .sb-icon-img, app-profile .bottom-block .trainings .heading .refresh-icon, app-profile .contacts .email.light .icon, app-profile .contacts .phone.light .icon, app-profile .contacts .email ion-icon{
@@ -32,17 +32,23 @@ ion-button .tool-icon, .sb-label-grid.sb-box-grid .item .sb-icon-img {
 ion-icon {
   color: var(--app-primary) !important;
 }
-ion-icon.arrow-icon,.top-back-button,.sb--card__title,.batch-detail, .lighter {
+ion-icon.arrow-icon,.top-back-button,.sb--card__title,.batch-detail, .lighter, .selected-lang .label-text {
 color: var(--app-primary-contrast) !important;
 }
 .sb-label-grid .item,app-profile .contacts,.framework-block, app-profile .self-declare-teacher-details, .trainings .content {
   background: var(--cc-sbcard-bg) !important;
   border-color: transparent !important;
 }
+.language-card label, .popover-wrapper .popover-content {
+  background-color: var(--app-primary-tint);
+}
+.sb-label-grid .item {
+  border: 1px solid var(--app-primary-shade) !important;
+}
 .segment-button-checked ion-label {
   color:var(--app-primary);
 }
-.sb-popover .sb-popover-footer .sb-popover-action-btn.popover-color,.segment-button-indicator-background,.block-button-save, app-profile .roles-container .roles, app-profile .contacts .phone, app-profile .contacts .email  {
+.sb-popover .sb-popover-footer .sb-popover-action-btn.popover-color,.segment-button-indicator-background,.block-button-save, app-profile .roles-container .roles, app-profile .contacts .phone, app-profile .contacts .email,.sb-btn-large  {
   background: var(--app-primary);
   color: var(--app-primary-contrast);
 }
@@ -102,7 +108,9 @@ app-profile .school-details {
 .sign-in-card-success .sign-in-block {
   background-color: var(--app-primary-tint);
 }
-
+body {
+  background-color: var(--app-primary);
+}
 body::before {
   content: "";
   width: 40%;
@@ -146,4 +154,21 @@ app-admin-home sb-pills-grid .sb-label-grid.show-icon.sb-box-grid div.item {
   &:nth-child(7) {background-color: #beb7e4 !important;}
   &:nth-child(8) {background-color: #c9bf9d !important;}
 }
+.selected-lang .language-selection{
+  box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.3);
+}
+.container-focus {
+  filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.1));
+}
+.sb-label-grid.icon-header .item .img {
+  background: var(--app-primary-tint);
+}
+.sb-btn-primary-outline, .sb-btn {
+  color: var(--app-primary-contrast) !important;
+  background-color: var(--app-primary) !important;
+}
+span.app-name {
+  color: var(--app-primary-contrast);
+}
+
 }
