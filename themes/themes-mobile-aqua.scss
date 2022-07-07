@@ -17,9 +17,9 @@ html[data-theme="JOYFUL"][data-color="aqua"]{
     --cc-sbcard-bg:var(--app-primary-tint);
 
 /* overwrites */
-.sb--card {
-  background-color: #fff !important;
-}
+// .sb--card {
+//   background-color: #fff !important;
+// }
 .sb-menu-icon .tool-icon, ion-tab-button.tab-selected, .profile ion-tabs ion-tab-button.tab-selected ion-icon, .sb-side-menu .sb-menu-list .item ion-icon,img.arrow-icon.animate, .selected-lang .language-selection .icon-check,img.arrow-icon {
   filter: invert(55%) sepia(100%) saturate(1893%) hue-rotate(360deg) brightness(0%) contrast(107%);
 }
@@ -45,9 +45,9 @@ color: var(--app-primary-contrast) !important;
 .segment-button-checked ion-label {
   color:var(--app-primary);
 }
-.sb-popover .sb-popover-footer .sb-popover-action-btn.popover-color,.segment-button-indicator-background,.block-button-save, app-profile .roles-container .roles, app-profile .contacts .phone, app-profile .contacts .email,.sb-btn-large, app-profile-settings div.ion-padding.ion-no-border, .header-info, .sign-in-card-success .sign-in-block, ion-card, .content-preferences-info, .grid-container {
+.sb-popover .sb-popover-footer .sb-popover-action-btn.popover-color,.segment-button-indicator-background,.block-button-save, app-profile .roles-container .roles, app-profile .contacts .phone, app-profile .contacts .email,.sb-btn-large, app-profile-settings div.ion-padding.ion-no-border, .header-info, .sign-in-card-success .sign-in-block, ion-card, .content-preferences-info, .grid-container, .another-user-title {
   background: var(--app-primary) !important;
-  color: var(--app-primary-contrast);
+  color: var(--app-primary-contrast) !important;
 }
 .content-preferences-info,.grid-container {
   border-bottom: 0.3px solid transparent;
@@ -120,7 +120,7 @@ app-profile .school-details {
   }
 }
 
-body {
+body, .sb-members-list-item .sb-member__img {
   background-color: var(--app-primary);
 }
 body::before {
