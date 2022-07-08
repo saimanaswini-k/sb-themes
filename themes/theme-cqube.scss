@@ -9,7 +9,7 @@ html[data-theme="light"] {
   --cQ-gray: #333;
   --cQ-gray-contrast: #fff;
 }
-html[data-layout="layout1"] {
+html[data-layout="cQubeDefault"] {
   body {
     background: var(--cQ-theme-bg) !important;
   }
