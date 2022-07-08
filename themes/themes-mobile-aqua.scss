@@ -12,15 +12,15 @@ html[data-theme="JOYFUL"][data-color="aqua"]{
     --app-primary-header-light: var(--app-primary-tint);
     --app-tertiary-background:#F3F7FB;
     --app-secondary-background: var(--app-primary-tint);
-    
+
     --cc-lb-card-stack-btn-bg: var(--app-primary-tint);
     --cc-sbcard-bg:var(--app-primary-tint);
 
 /* overwrites */
-.sb--card {
-  background-color: #fff !important;
-}
-.sb-menu-icon .tool-icon, ion-tab-button.tab-selected, .profile ion-tabs ion-tab-button.tab-selected ion-icon, .sb-side-menu .sb-menu-list .item ion-icon,img.arrow-icon.animate, .selected-lang .language-selection .icon-check {
+// .sb--card {
+//   background-color: #fff !important;
+// }
+.sb-menu-icon .tool-icon, ion-tab-button.tab-selected, .profile ion-tabs ion-tab-button.tab-selected ion-icon, .sb-side-menu .sb-menu-list .item ion-icon,img.arrow-icon.animate, .selected-lang .language-selection .icon-check,img.arrow-icon {
   filter: invert(55%) sepia(100%) saturate(1893%) hue-rotate(360deg) brightness(0%) contrast(107%);
 }
 ion-button .tool-icon, .sb-label-grid.sb-box-grid .item .sb-icon-img,.tutorial-popover .popover-wrapper img.close-icon {
@@ -32,15 +32,12 @@ ion-button .tool-icon, .sb-label-grid.sb-box-grid .item .sb-icon-img,.tutorial-p
 ion-icon {
   color: var(--app-primary) !important;
 }
-ion-icon.arrow-icon,.top-back-button,.sb--card__title,.batch-detail, .lighter, .selected-lang .label-text {
+ion-icon.arrow-icon,.top-back-button,.sb--card__title,.batch-detail, .lighter, .selected-lang .label-text, span.app-name,app-profile-settings .title,app-profile-settings .board-select-dummy .ps-board .ps-board-label, .explore-more-books, ion-button, .explore-more-content, app-resources sb-library-filters .sb-medium-pills-container .pill.active, app-resources sb-library-filters .sb-grade-pills-container .pill.active {
 color: var(--app-primary-contrast) !important;
 }
 .sb-label-grid .item,app-profile .contacts,.framework-block, app-profile .self-declare-teacher-details, .trainings .content {
   background: var(--cc-sbcard-bg) !important;
   border-color: transparent !important;
-}
-.language-card label, .popover-wrapper .popover-content {
-  background-color: var(--app-primary-tint);
 }
 .sb-label-grid .item {
   border: 1px solid var(--app-primary-shade) !important;
@@ -48,19 +45,35 @@ color: var(--app-primary-contrast) !important;
 .segment-button-checked ion-label {
   color:var(--app-primary);
 }
-.sb-popover .sb-popover-footer .sb-popover-action-btn.popover-color,.segment-button-indicator-background,.block-button-save, app-profile .roles-container .roles, app-profile .contacts .phone, app-profile .contacts .email,.sb-btn-large  {
-  background: var(--app-primary);
-  color: var(--app-primary-contrast);
+.sb-popover .sb-popover-footer .sb-popover-action-btn.popover-color,.segment-button-indicator-background,.block-button-save, app-profile .roles-container .roles, app-profile .contacts .phone, app-profile .contacts .email,.sb-btn-large, app-profile-settings div.ion-padding.ion-no-border, .header-info, .sign-in-card-success .sign-in-block, ion-card, .content-preferences-info, .grid-container, .another-user-title {
+  background: var(--app-primary) !important;
+  color: var(--app-primary-contrast) !important;
+}
+.content-preferences-info,.grid-container {
+  border-bottom: 0.3px solid transparent;
+  border-top: 0.3px solid transparent;
+  border:1px solid transparent;
+}
+ion-card {
+  box-shadow: none !important;
 }
 .stack-btn,sb-library-cards-stack .sbbtn, app-district-mapping .block-button-clear, .bottom-block {
   background: transparent !important;
   border: 1px solid var(--app-primary-tint) !important;
 }
-.footer, .sb-btn-tile, .sb-side-menu ion-footer.side-menu-footer, .sb-side-menu ion-header, app-application-header ion-content, app-application-header .sb-menu-list, app-application-header ion-item, .app-user-home ion-content,app-search ion-content,app-admin-home ion-content, .preference-popup .modal-wrapper,.sb-popover ion-content,.sb-popover .sb-popover-footer {
+.footer, .sb-btn-tile, .sb-side-menu ion-footer.side-menu-footer, .sb-side-menu ion-header, app-application-header ion-content, app-application-header .sb-menu-list, app-application-header ion-item, .app-user-home ion-content,app-search ion-content,app-admin-home ion-content, .preference-popup .modal-wrapper,.sb-popover ion-content,.sb-popover .sb-popover-footer, .sb-slider-pills-container .sb-pills-container .pill {
     --background: var(--app-primary-tint) !important;
     background: var(--background) !important;
     background-color: var(--app-primary-tint) !important;
     color:var(--app-primary-contrast);
+}
+ .sb-slider-pills-container .sb-medium-pills-container .pill {
+  border: var(--app-primary-tint) .0625rem solid;
+}
+app-resources sb-library-filters .sb-medium-pills-container .pill.active, app-resources sb-library-filters .sb-grade-pills-container .pill.active {
+  color: var(--app-primary-contrast) !important;
+  background-color: var(--app-primary-shade) !important;
+  border-color: var(--app-primary-shade) !important;
 }
 app-admin-home ion-content,ion-content {
   background-color: transparent !important;
@@ -69,8 +82,8 @@ app-admin-home ion-content,ion-content {
 .sb-side-menu ion-footer.side-menu-footer {
   border-radius: 0;
 }
-  .sb-view-all-container .sb-view-all-items .sb-view-all-title, app-application-header .sb-menu-item, app-profile .contacts .email .value, app-profile .contacts .phone .value {
-    color: var(--app-primary-contrast);
+  .sb-view-all-container .sb-view-all-items .sb-view-all-title, app-application-header .sb-menu-item, app-profile .contacts .email .value, app-profile .contacts .phone .value, .ftue-changes.select-alert .alert-button:last-child:not(:only-child), .ftue-changes.select-alert .alert-button:first-child:not(:only-child), .select-box.select-alert .alert-button:last-child:not(:only-child),.select-box.select-alert .alert-button:first-child:not(:only-child), .header-info .theme-header-info, .header-info .learning-info {
+    color: var(--app-primary-contrast) !important;
   }
   .sb-view-all-container .sb-view-all-items {
     background-color: transparent;
@@ -80,7 +93,7 @@ app-admin-home ion-content,ion-content {
     background: var(--cc-sbcard-bg);
     border-bottom: 1px solid var(--app-primary);
   }
-  .sb-card-container .sb-card.sb-card-active, .trainings .heading {
+  .sb-card-container .sb-card.sb-card-active, .trainings .heading,.qr-board::after, .alert-button-group.sc-ion-alert-md {
     background: var(--app-primary-shade) !important;
 }
   app-download-manager .sb-card-download-container .check-container {
@@ -91,7 +104,8 @@ ion-checkbox {
   --background-checked: var(--app-primary-tint);
   --border-color-checked: var(--app-primary-tint);
 }
-ion-tabs ion-tab-bar {
+
+ion-tabs ion-tab-bar,.sign-in-card-success .sign-in-block,.language-card label, .popover-wrapper .popover-content,.card-container,.sb-label-grid.icon-header .item .img {
   background: var(--app-primary-tint);
 }
 ion-tabs ion-tab-button.qrscanner ion-icon {
@@ -105,10 +119,8 @@ app-profile .school-details {
     background-color: var(--app-primary-tint);
   }
 }
-.sign-in-card-success .sign-in-block {
-  background-color: var(--app-primary-tint);
-}
-body {
+
+body, .sb-members-list-item .sb-member__img {
   background-color: var(--app-primary);
 }
 body::before {
@@ -154,21 +166,23 @@ app-admin-home sb-pills-grid .sb-label-grid.show-icon.sb-box-grid div.item {
   &:nth-child(7) {background-color: #beb7e4 !important;}
   &:nth-child(8) {background-color: #c9bf9d !important;}
 }
-.selected-lang .language-selection{
+.selected-lang .language-selection,.card-container{
   box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.3);
 }
 .container-focus {
   filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.1));
 }
-.sb-label-grid.icon-header .item .img {
-  background: var(--app-primary-tint);
-}
-.sb-btn-primary-outline, .sb-btn {
+.sb-btn-primary-outline, .sb-btn,.sb-btn-secondary,.qr-btn, .letsgo-info, .cancel_info {
   color: var(--app-primary-contrast) !important;
   background-color: var(--app-primary) !important;
-}
-span.app-name {
-  color: var(--app-primary-contrast);
+  border:0.0625rem solid var(--app-primary) !important;
 }
 
+.ftue-changes.select-alert .alert-wrapper button[aria-checked="true"] {
+  background: var(--app-primary-shade) !important;
+  border-radius: 0 !important;
+}
+ion-item.item-label-stacked {
+  --background: transparent;
+}
 }
