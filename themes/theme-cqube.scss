@@ -1,0 +1,242 @@
+
+html[data-theme="light"] {
+    --cQ-theme-bg: #eef2fb;
+    --cQ-theme-bg-shade: #dbe7ff;
+    --cQ-primary: #505af7;
+    --cQ-primary-contrast: #fff;
+    --cQ-secondary: #f00;
+    --cQ-secondary-contrast: #fff;
+    --cQ-gray: #333;
+    --cQ-gray-contrast: #fff;
+  }
+  html[data-layout="layout1"] {
+    body {
+      background: var(--cQ-theme-bg) !important;
+    }
+    .app-nav-bar {
+      height: 5.5rem;
+      background: var(--cQ-theme-bg) !important;
+      box-shadow: none;
+    }
+    .app-side-nav {
+      margin-top: 5.5rem;
+      height: calc(100vh - 5.5rem);
+      background: var(--cQ-theme-bg) !important;
+      box-shadow: none;
+      width: 18rem;
+      ul {
+        margin-left: 1.5rem;
+        li {
+          border-bottom: 0px solid #eee !important;
+          min-height: 3rem;
+          padding: 0.5rem !important;
+          display: flex;
+          align-items: center;
+          padding-left: 1rem !important;
+          &:hover {
+            background-color: var(--cQ-theme-bg-shade);
+            border-radius: 2rem;
+          }
+          div:first-child {
+            margin: 0;
+            padding: 0px;
+            font-size: 0.875rem;
+          }
+          div.btn {
+            color: var(--cQ-gray);
+          }
+        }
+      }
+    }
+    h1.leading-tight,
+    .metric-card-wrapper .h4 {
+      color: var(--cQ-gray) !important;
+      font-size: 1.25rem;
+    }
+    .app-content-wrapper {
+      padding-top: 5.5rem;
+      padding-left: 18rem;
+      padding-right: 0rem;
+    }
+    .active:focus {
+      background-color: transparent !important;
+      color: var(--cQ-primary) !important;
+    }
+    .app-content-wrapper .app-content {
+      padding: 1rem 0 1rem 1rem;
+      p.h3 {
+        margin-bottom: 1rem !important;
+        font-size: 1.25rem;
+        color: var(--cQ-gray);
+      }
+      .dashboard {
+        background: var(--cQ-theme-bg-shade);
+        border-radius: 2rem 0 0 2rem;
+        padding: 1.5rem;
+        row-gap: 1rem;
+      }
+    }
+  
+    .metric-card-wrapper,
+    .tab-group-wrapper {
+      background: none !important;
+      padding: 0 !important;
+    }
+    .tab-group-wrapper {
+      margin-top: 2rem !important;
+    }
+  
+    /** library css */
+    /* grid */
+  .sb-cQ-grid {
+      display: flex;
+        gap:1rem;
+      padding: 2rem 1rem;
+      overflow-x: auto;
+        &--2 {
+          flex-wrap: wrap;
+          overflow-x: unset;
+          display:grid;
+          grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
+        }
+      }
+      /* sb cq card */
+      
+      .sb-cQ-card {
+        // width:9.25rem;
+        min-width:9.25rem;
+        height:9.25rem;
+        padding:1.5rem;
+        background:var(--cQcard-bg);
+        border-radius: 1.5rem;
+        border:1px solid var(--cQcard-border);
+        box-shadow:  1rem 1rem 3.5rem var(--cQcard-boxshadow),-1rem -1rem 3.5rem var(--cQcard-boxshadow);
+        position:relative;
+        display:flex;
+        align-items:center;
+        justify-content:center;text-align:center;
+        &__info {
+          width:1.25rem;
+          height:1.25rem;
+          position:absolute;
+          right:1rem;
+          top:1rem;
+          img {
+            width:100%;
+          }
+        }
+        &__data {
+          display:flex;
+          flex-direction:column;
+          span.Value {
+            font-size:1.5rem;
+            font-weight:bold;
+            color:var(--cQ-primary);
+          }
+          span.Title {
+            color:var(--cQ-gray555);
+            font-size:0.875rem;
+          }
+        }
+      }
+      
+      .sb-cQ-card_2 {
+        min-width:20rem;
+        height:20rem;
+        display:flex;
+            flex-direction: column;
+          justify-content: space-between;
+        overflow:inherit;
+        &:hover {
+          background:var(--white) !important;
+        }
+        .brand {
+          display:flex;
+          flex-direction:row;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          .title {
+            color:var(--cQ-gray);
+          }
+          .logo {
+                width: 64px;
+          height: 64px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+            img {
+              max-width:100%;
+            }
+          }
+        }
+        .dataContainer {
+              display: flex;
+          align-items: center;
+          gap:1rem;    width: 100%;
+          div {
+                display: flex;
+          align-items: center;
+            flex-direction:column;
+            flex:50%;
+          }
+        }
+         button {
+           border: 0.0625rem solid var(--cQcard-btn-border);
+          padding: 1rem;
+          border-radius: 1.5rem;
+          width: 100%;
+          font-size: 1rem;
+          background: var(--cQcard-bg);
+           cursor:pointer;
+           min-height: 3rem;
+           color:var(--cQcard-contrast);
+           &:hover {
+             background:var(--cQ-primary);
+             color:var(--cQ-primary-contrast);
+           }
+        }
+        // &:nth-child(1) {
+        //   background-color:#81aef9;
+        // }
+        // &:nth-child(2) {
+        //   background-color:#cdedc2;
+        // }
+      }
+      
+  }
+  
+  html[data-theme="dark"] {
+    --cQ-theme-bg: #161616;
+    --cQ-theme-bg-shade: #232227;
+    --cQ-primary: #505af7;
+    --cQ-primary-contrast: #fff;
+    --cQcard-bg: #1b1a1f;
+    --cQcard-titleColor: #999;
+    --cQcard-contrast: #fff;
+    --cQcard-border: #27262a;
+    --cQcard-boxshadow: #111217;
+    --white: #333;
+    --cQ-gray: #fff;
+    --cQ-gray-contrast: #333;
+    --cQ-gray555: #999;
+  
+    .sb-cQ-card {
+      box-shadow: 1rem 1rem 3.5rem #111217, -1rem -1rem 3.5rem #111217;
+    }
+    .sb-cQ-card_2,
+    .sb-cQ-card {
+      .brand .title {
+        color: var(--cQ-gray);
+      }
+      button {
+        background: #1b1a1f !important;
+        border: 0.0625rem solid #363538;
+        color: var(--cQ-primary);
+        &:hover {
+          background: var(--cQ-primary) !important;
+          color: var(--cQ-gray) !important;
+        }
+      }
+    }
+  }
