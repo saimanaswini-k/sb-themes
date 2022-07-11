@@ -68,6 +68,7 @@ html[data-layout="cQubeDefault"] {
   .metric-card-wrapper > div {
     background: var(--metaDatabox-bg);
     padding-left: 1.5rem;
+    padding-right: 1.5rem;
     border-radius: 1.5rem 0 0 1.5rem;
   }
   .app-content-wrapper {
@@ -98,11 +99,19 @@ html[data-layout="cQubeDefault"] {
   .tab-group-wrapper {
     background: none !important;
     padding: 0 !important;
+    padding-right: 1.5rem !important;
   }
   .tab-group-wrapper {
     margin-top: 2rem !important;
   }
-
+  .mat-tab-body-wrapper {
+    border-radius: 1rem;
+    overflow: hidden;
+    background: var(--white);
+  }
+.mat-tab-label-container .mat-tab-list {
+  padding-left: 1rem;
+}
   /** library css */
   /* grid */
 .sb-cQ-grid {
@@ -228,7 +237,7 @@ html[data-layout="cQubeDefault"] {
       background: none;
     color: var(--cQ-primary);
     border-bottom: 3px solid var(--cQ-primary) !important;
-    border-radius: 0;
+    border-radius: 0 !important;
     border: 0;
     }
     .mat-tab-label {
@@ -241,6 +250,10 @@ html[data-layout="cQubeDefault"] {
       color: var(--cQ-primary);
     }
 
+    .app-nav-bar .md\:container.h-full {
+      max-width: 100%;
+      padding: 0 2rem;
+    }
     @media (max-width: 1280px) {
 .app-content-wrapper {
     padding-left: 0 !important;
@@ -261,7 +274,7 @@ html[data-theme="dark"] {
   --cQcard-border: #27262a;
   --cQcard-boxshadow: #111217;
   --cQcard-btn-border: #363538;
-  --white: #333;
+  --white: #232227;
   --cQ-gray: #fff;
   --cQ-gray-contrast: #333;
   --cQ-gray555: #999;
