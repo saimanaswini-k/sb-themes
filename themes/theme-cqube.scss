@@ -31,6 +31,9 @@ html[data-layout="cQubeDefault"] {
   .menu-item div{
     display: flex;
     align-items: center;
+    img {
+      border-radius: 50%;
+    }
   }
   .ncert_logo {
     height: 3.5rem;
@@ -39,6 +42,7 @@ html[data-layout="cQubeDefault"] {
   .headerInnerContainer {
     align-items: center;
   }
+
   .app-side-nav {
     margin-top: 5.5rem;
     height: calc(100vh - 5.5rem);
@@ -46,7 +50,7 @@ html[data-layout="cQubeDefault"] {
     box-shadow: none;
     width: 17rem;
     ul {
-      margin-left: 1.5rem;
+      margin-left: 0.5rem;
       margin-right:1.5rem;
       li {
         border-bottom: 0px solid #eee !important;
@@ -56,7 +60,7 @@ html[data-layout="cQubeDefault"] {
         align-items: center;
         padding-left: 1rem !important;
         padding-right: 1rem !important;
-        &:hover {
+        &:hover,&.active {
           background-color: var(--cQ-theme-bg-shade);
           border-radius: 2rem;
         }
@@ -65,7 +69,7 @@ html[data-layout="cQubeDefault"] {
           padding: 0px;
           font-size: 1rem;
         }
-        div.btn {
+        div.btn span {
           color: var(--cQ-gray);
           word-break: break-all;
           white-space: nowrap;
@@ -75,6 +79,97 @@ html[data-layout="cQubeDefault"] {
       }
     }
   }
+
+
+
+
+#sidebarMenu {
+  // transform: translateX(0); /*change here related your menu height*/
+}
+
+.sidebarMenuInner{
+  margin:0;
+  padding:0;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+input[type="checkbox"]:checked ~ #sidebarMenu {
+  // transform: translateX(-18rem);
+  // top:50px /*change here related your top menu height*/
+  li div span {
+      display: none;
+  }
+}
+input[type=checkbox] {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  display: none;
+}
+.sidebarIconToggle {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  cursor: pointer;
+  // position: absolute;
+  z-index: 99;
+  height: 1.375rem;
+  width: 1.375rem;
+  margin-bottom: 0px;
+  // display: none
+  margin-left: 1.75rem;
+}
+.spinner {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: black;
+}
+.horizontal {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  margin-top: 3px;
+}
+.diagonal.part-1 {
+  position: relative;
+  transition: all 0.3s;
+  box-sizing: border-box;
+  float: left;
+}
+.diagonal.part-2 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  margin-top: 3px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  opacity: 0;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  transform: rotate(135deg);
+  margin-top: 8px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  transform: rotate(-135deg);
+  margin-top: -9px;
+}
+
+
+//  @media screen and (max-width: 950px) {
+//       .sidebarIconToggle{
+//           display:block
+//        }
+//     }
+
+
   h1.leading-tight,
   .metric-card-wrapper .h4 {
     color: var(--cQ-gray) !important;
