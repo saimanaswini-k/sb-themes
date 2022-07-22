@@ -16,9 +16,10 @@ html[data-theme="light"][data-layout="cQubeDkR"] {
   --metaDatabox-bg: #61D5F4;
 }
 html[data-layout="cQubeDkR"] {
+        overflow-x: hidden;
   body {
-    background: linear-gradient(90deg, #4C30F5 30%, #61D5F4 126.6%) !important;
-    overflow-y: scroll;
+    background: linear-gradient(90deg, var(--cQ-theme-bg) 30%, var(--cQ-theme-bg-shade) 126.6%) !important;
+    overflow-y: auto;
   }
   .app-nav-bar {
     height: 5.5rem;
@@ -29,6 +30,8 @@ html[data-layout="cQubeDkR"] {
     align-items: center;
     left: 18rem;
     transition: all 0.3s;
+    position: absolute;
+    z-index: 1;
   }
   .sidebaractive .app-nav-bar {
     left: 6rem;
@@ -49,13 +52,15 @@ html[data-layout="cQubeDkR"] {
   }
 
   .app-side-nav {
-    margin-top: 0rem;
+    margin-top: -5.5rem;
     height: 100%;
     background: var(--cQ-primary) !important;
     box-shadow: none;
     width: 18rem;
     transition: all 0.3s;
     padding: 0 0rem 0 1rem;
+    display: block;
+    z-index: 8;
     ul {
       // margin-left: 0.5rem;
       // margin-right:1.5rem;
@@ -253,17 +258,21 @@ html[data-layout="cQubeDkR"] {
     border-radius: 1.5rem 0 0 1.5rem;
   }
   .app-content-wrapper {
-    padding-top: 5.5rem;
-    padding-left: 20rem;
+    margin-top: 5.5rem;
+    padding-top:0;
+    padding-left: 20rem !important;
     padding-right: 0rem;
     transition: all 0.3s;
+    background: linear-gradient(90deg, var(--cQ-theme-bg) 30%, var(--cQ-theme-bg-shade) 126.6%) !important;
+  position: relative;
+  z-index: 1;
   }
   .active:focus {
     background-color: transparent !important;
     color: var(--cQ-primary) !important;
   }
   .app-content-wrapper .app-content {
-    padding: 0.5rem 0 1rem 0rem;
+    padding: 0.5rem 0 1rem 0rem !important;
     p.h3 {
       margin-bottom: 1rem !important;
       font-size: 1.25rem;
@@ -386,6 +395,10 @@ html[data-layout="cQubeDkR"] {
         text-align: left;
         word-break: break-word;
         margin-right: 0.5rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
       }
       .logo {
         width: 4.5rem;
@@ -454,66 +467,103 @@ html[data-layout="cQubeDkR"] {
     max-width: 100%;
     padding: 0 2rem;
   }
-  @media (max-width: 1440px) {
-    .app-side-nav {
-      display: block !important;
-      position: fixed;
-      z-index: 9;
-    }
-    .app-content-wrapper {
-      padding-left: 7.5rem !important;
-      padding-right: 0 !important;
-      transition: all 0.3s;
-    }
-  }
-  @media (max-width: 992px) {
-    .sidebaractive .app-content-wrapper {
-      padding-left: 0rem !important;
-    }
-    .sb-cQ-card_2,
-    .sb-cQ-card {
-      min-width: auto;
-    }
-    .app-content-wrapper {
-      padding-left: 0rem !important;
-    }
 
-    .sidebaractive input[type="checkbox"]:checked ~ #sidebarMenu li div span {
-      display: block;
-    }
-    .sidebaractive
-      input[type="checkbox"]:checked
-      ~ .sidebarIconToggle
-      > .horizontal {
-      opacity: 0;
-    }
-    .horizontal {
-      opacity: 1;
-    }
-    .diagonal.part-1 {
-      transform: rotate(0deg);
-    }
-    .diagonal.part-2 {
-      transform: rotate(180deg);
-      margin-top: -15px;
-    }
-    .sidebaractive
-      input[type="checkbox"]:checked
-      ~ .sidebarIconToggle
-      > .diagonal.part-1 {
-      transform: rotate(-135deg);
-      margin-top: 6px;
-    }
-    .sidebaractive
-      input[type="checkbox"]:checked
-      ~ .sidebarIconToggle
-      > .diagonal.part-2 {
-      transform: rotate(-45deg);
-      margin-top: -9px;
-    }
+
+@media (max-width: 992px) {
+  .sidebaractive .app-content-wrapper {
+    padding-left: 0rem !important;
+  }
+  .sb-cQ-card_2,
+  .sb-cQ-card {
+    min-width: auto;
+  }
+  .app-content-wrapper {
+    padding-left: 0rem !important;
+  }
+
+  .sidebaractive input[type="checkbox"]:checked ~ #sidebarMenu li div span {
+    display: block;
+  }
+  .sidebaractive
+    input[type="checkbox"]:checked
+    ~ .sidebarIconToggle
+    > .horizontal {
+    opacity: 0;
+  }
+  .horizontal {
+    opacity: 1;
+  }
+  .diagonal.part-1 {
+    transform: rotate(0deg);
+  }
+  .diagonal.part-2 {
+    transform: rotate(180deg);
+    margin-top: -15px;
+  }
+  .sidebaractive
+    input[type="checkbox"]:checked
+    ~ .sidebarIconToggle
+    > .diagonal.part-1 {
+    transform: rotate(-135deg);
+    margin-top: 6px;
+  }
+  .sidebaractive
+    input[type="checkbox"]:checked
+    ~ .sidebarIconToggle
+    > .diagonal.part-2 {
+    transform: rotate(-45deg);
+    margin-top: -9px;
   }
 }
 
+@media (max-width: 768px) { 
+  .app-content-wrapper {
+      padding-left: 1rem !important;
+  }
+  .mainHeaderContent h1.leading-tight {
+      display: none;
+  }
+  .app-nav-bar {
+      left: 6rem;
+  }
+  .app-side-nav {
+      width: 6rem;
+      height:auto;
+      .menu {
+          display: none;
+      }
+  }
+
+  .sidebaractive {
+      .app-content-wrapper {
+          padding-left: 1rem !important;
+      }
+      .app-nav-bar {
+          left: 6rem;
+      }
+      .app-side-nav {
+          width: 90%;
+          height:100%;
+          padding-right: 1rem;
+          .menu {
+              display: block;
+          }
+      }
+      .app-side-nav ul li div span {
+          display: block;
+      }
+      .app-side-nav ul li {
+          border-radius: 2rem;
+          width: 100%;
+          height: 4rem;
+          transition: all 0.3s;
+      }
+  }
+}
+
+
+
+}
 html[data-theme="dark"][data-layout="cQubeDkR"] {
   --cQ-theme-bg: #161616;
   --cQ-theme-bg-shade: #232227;
