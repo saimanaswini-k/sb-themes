@@ -1,4 +1,4 @@
-html[data-theme="light"] {
+html[data-theme="light"][data-layout="cQubeDefault"]  {
   --cQ-theme-bg: #eef2fb;
   --cQ-theme-bg-shade: #dbe7ff;
   --cQ-primary: #505af7;
@@ -455,7 +455,7 @@ html[data-layout="cQubeDefault"] {
   }
 }
 
-html[data-theme="dark"] {
+html[data-theme="dark"][data-layout="cQubeDefault"]  {
   --cQ-theme-bg: #161616;
   --cQ-theme-bg-shade: #232227;
   --cQ-primary: #505af7;
@@ -487,3 +487,7 @@ html[data-theme="dark"] {
   background-color: #c8d3eb;
   border: 0.125rem solid #c8d3eb;
 }
+
+
+@import url(./theme-dk.scss);
+@import url(./theme-dk-reverse.scss);

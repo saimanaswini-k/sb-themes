@@ -1,32 +1,33 @@
+
 html[data-theme="light"][data-layout="cQubeDkR"] {
   --white: #fff;
   --cQ-gray: #333;
   --cQ-gray555: #555;
-  --cQ-theme-bg: #eef2fb;
-  --cQ-theme-bg-shade: #dbe7ff;
-  --cQ-primary: #051e34;
+  --cQ-theme-bg: #4C30F5;
+  --cQ-theme-bg-shade: #61D5F4;
+  --cQ-primary: #202342;
   --cQ-primary-contrast: var(--white);
-  --cQ-secondary: #024f9d;
+  --cQ-secondary: #4C30F5;
   --cQ-secondary-contrast: var(--white);
   --cQ-tertiary: #ffd954;
   --cQ-tertiary-contrast: var(--cQ-gray);
   --cQ-gray-contrast: var(--white);
   --cQcard-boxshadow: #bfd2fc;
-  --metaDatabox-bg: #dbe7ff;
+  --metaDatabox-bg: #61D5F4;
 }
 html[data-layout="cQubeDkR"] {
   body {
-    background: var(--cQ-theme-bg) !important;
+    background: linear-gradient(90deg, #4C30F5 30%, #61D5F4 126.6%) !important;
     overflow-y: scroll;
   }
   .app-nav-bar {
     height: 5.5rem;
-    background: var(--cQ-theme-bg) !important;
+    background: none !important;
     box-shadow: none;
     margin: 0;
     display: flex;
     align-items: center;
-    left: 17rem;
+    left: 18rem;
     transition: all 0.3s;
   }
   .sidebaractive .app-nav-bar {
@@ -52,7 +53,7 @@ html[data-layout="cQubeDkR"] {
     height: 100%;
     background: var(--cQ-primary) !important;
     box-shadow: none;
-    width: 17rem;
+    width: 18rem;
     transition: all 0.3s;
     padding: 0 0rem 0 1rem;
     ul {
@@ -66,7 +67,6 @@ html[data-layout="cQubeDkR"] {
         align-items: center;
         padding: 1rem 1rem 1rem 1rem !important;
         margin-bottom: 0.5rem;
-        transition: all 0.3s;
         position: relative;
         i {
           width: 3rem;
@@ -93,30 +93,30 @@ html[data-layout="cQubeDkR"] {
           background-color: var(--cQ-theme-bg);
           border-radius: 2rem 0 0 2rem;
           div.btn {
-            color: var(--cQ-gray);
+            color: var(--white);
           }
         }
-        &.activeLink:before {
+        &:hover:before, &.activeLink:before {
           content: "";
           position: absolute;
-          top: -1.5rem;
+          top: -2.5rem;
           right: 0px;
-          width: 1.5rem;
-          height: 1.5rem;
+          width: 2.5rem;
+          height: 2.5rem;
           background: transparent;
           border-radius: 50%;
-          box-shadow: 0.75rem 0.75rem 0 var(--cQ-theme-bg);
+          box-shadow: 1.25rem 1.25rem 0 var(--cQ-theme-bg);
         }
-        &.activeLink:after {
+        &:hover:after, &.activeLink:after {
           content: "";
           position: absolute;
-          bottom: -1.5rem;
+          bottom: -2.5rem;
           right: 0px;
-          width: 1.5rem;
-          height: 1.5rem;
+          width: 2.5rem;
+          height: 2.5rem;
           background: transparent;
           border-radius: 50%;
-          box-shadow: 0.75rem -0.75rem 0 var(--cQ-theme-bg);
+          box-shadow: 1.25rem -1.25rem 0 var(--cQ-theme-bg);
         }
 
         div:first-child {
@@ -128,22 +128,6 @@ html[data-layout="cQubeDkR"] {
     }
   }
 
-  .active:focus {
-    background-color: rgb(7 89 133);
-    color: white;
-    box-shadow: none;
-  }
-  .active:focus {
-    box-shadow: none;
-  }
-  .activeLink {
-    background-color: var(--cQ-tertiary);
-    border-radius: 2rem;
-    color: var(--cQ-primary);
-    div.btn span {
-      color: var(--cQ-gray);
-    }
-  }
 
   .sidebaractive .app-side-nav ul li {
     border-radius: 50%;
@@ -267,7 +251,7 @@ html[data-layout="cQubeDkR"] {
   }
   .app-content-wrapper {
     padding-top: 5.5rem;
-    padding-left: 18.5rem;
+    padding-left: 20rem;
     padding-right: 0rem;
     transition: all 0.3s;
   }
@@ -280,12 +264,12 @@ html[data-layout="cQubeDkR"] {
     p.h3 {
       margin-bottom: 1rem !important;
       font-size: 1.25rem;
-      color: var(--cQ-gray);
+      color: var(--white);
     }
     .dashboard {
-      background: var(--cQ-theme-bg-shade);
+      background: none;
       border-radius: 2rem 0 0 2rem;
-      padding: 1.5rem;
+      padding-right: 1.5rem;
       row-gap: 1rem;
     }
   }
@@ -344,7 +328,7 @@ html[data-layout="cQubeDkR"] {
     background: var(--cQcard-bg);
     border-radius: 1.5rem;
     border: 0.0625rem solid var(--cQcard-border);
-    box-shadow: -10px 10px 40px var(--cQcard-boxshadow);
+    box-shadow: none; //-10px 10px 40px var(--cQcard-boxshadow);
     position: relative;
     display: flex;
     align-items: center;
@@ -490,12 +474,7 @@ html[data-layout="cQubeDkR"] {
     .app-content-wrapper {
       padding-left: 0rem !important;
     }
-    .sidebaractive .app-side-nav {
-      width: 17rem !important;
-    }
-    .app-side-nav {
-      width: 0;
-    }
+
     .sidebaractive input[type="checkbox"]:checked ~ #sidebarMenu li div span {
       display: block;
     }
