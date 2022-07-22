@@ -1,5 +1,5 @@
 
-html[data-theme="light"] {
+html[data-theme="light"][data-layout="cQubeDk"] {
   --white: #fff;
   --cQ-gray: #333;
   --cQ-gray555: #555;
@@ -9,11 +9,13 @@ html[data-theme="light"] {
   --cQ-primary-contrast: var(--cQ-gray);
   --cQ-secondary: #024f9d;
   --cQ-secondary-contrast: var(--white);
+  --cQ-tertiary: #024f9d;
+  --cQ-tertiary-contrast: var(--white);
   --cQ-gray-contrast: var(--white);
   --cQcard-boxshadow: var(--cQ-theme-bg);
   --metaDatabox-bg:#e9e8d9;
 }
-html[data-layout="cQubeDefault"] {
+html[data-layout="cQubeDk"] {
   body {
     background: var(--cQ-theme-bg) !important;
     overflow-y: scroll;
@@ -54,7 +56,7 @@ html[data-layout="cQubeDefault"] {
     box-shadow: none;
     width: 17rem;
     transition: all 0.3s;
-    padding: 0 1rem;
+    padding: 0 0rem 0 1rem;
     ul {
       // margin-left: 0.5rem;
       // margin-right:1.5rem;
@@ -67,6 +69,7 @@ html[data-layout="cQubeDefault"] {
         padding:1rem 1rem 1rem 1rem !important;
         margin-bottom: 0.5rem;
         transition: all 0.3s;
+        position: relative;
         i {
           width: 3rem;
   height: 3rem;
@@ -76,22 +79,50 @@ html[data-layout="cQubeDefault"] {
   border-radius: 50%;
   margin-right: 0.5rem;
         }
-        &:hover,&.active {
-          background-color: var(--cQ-theme-bg-shade);
-          border-radius: 2rem;
-        }
-        div:first-child {
-          margin: 0;
-          padding: 0px;
-          font-size: 1rem;
+        div.btn {
+          color: var(--cQ-gray);
         }
         div.btn span {
-          color: var(--cQ-gray);
           word-break: break-all;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
           transition: all 0.3s;
+        }
+        &:hover,&.active,&.activeLink {
+          background-color: var(--cQ-theme-bg);
+          border-radius: 2rem 0 0 2rem;
+          div.btn {
+            color: var(--cQ-gray);
+          }
+        }
+        &.activeLink:before {
+          content: '';
+          position: absolute;
+          top: -1.5rem;
+          right: 0px;
+          width: 1.5rem;
+          height: 1.5rem;
+          background: transparent;
+          border-radius: 50%;
+          box-shadow: 0.75rem 0.75rem 0 var(--cQ-theme-bg);
+      }
+      &.activeLink:after {
+        content: '';
+        position: absolute;
+        bottom: -1.5rem;
+        right: 0px;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: transparent;
+        border-radius: 50%;
+        box-shadow: 0.75rem -0.75rem 0 var(--cQ-theme-bg);
+    }
+
+        div:first-child {
+          margin: 0;
+          padding: 0px;
+          font-size: 1rem;
         }
       }
     }
@@ -100,7 +131,11 @@ html[data-layout="cQubeDefault"] {
   .sidebaractive .app-side-nav ul li {
     border-radius: 50%;
   width: 4rem;
-  height: 4rem !important;
+  height: 4rem;
+  transition: all 0.3s;
+  &.activeLink:before, &.activeLink:after {
+    display: none;
+  }
     div span {
       display: none;
     }
@@ -315,7 +350,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
         span.Title {
           color:var(--cQ-gray555);
           font-size:1rem;
-          line-height: normal;
+          line-height: normal;height: inherit !important;
         }
       }
     }
@@ -466,7 +501,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     
 }
 
-html[data-theme="dark"] {
+html[data-theme="dark"][data-layout="cQubeDk"] {
   --cQ-theme-bg: #161616;
   --cQ-theme-bg-shade: #232227;
   --cQ-primary: #505af7;
@@ -488,17 +523,17 @@ html[data-theme="dark"] {
 ::-webkit-scrollbar-track
 {
     -webkit-box-shadow: inset 0 0 0.375rem rgba(0,0,0,0.3);
-    background-color: #C8D3EB;
+    background-color: transparent;
 }
 
 ::-webkit-scrollbar
 {
-    width: 0.25rem;
-    background-color: #C8D3EB;
+    width: 0rem;
+    background-color: var(--cQ-primary);
 }
 
 ::-webkit-scrollbar-thumb
 {
-    background-color: #C8D3EB;
-    border: 0.125rem solid #C8D3EB;
+  background-color: var(--cQ-primary);
+    // border: 0.125rem solid var(--cQ-primary);
 }
