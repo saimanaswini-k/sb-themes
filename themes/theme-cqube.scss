@@ -81,6 +81,23 @@ html[data-layout="cQubeDefault"] {
   }
 
 
+  .active:focus{
+    background-color: rgb(7 89 133);
+    color: white;
+    box-shadow: none;
+  }
+  
+  .active:focus{
+    box-shadow: none;
+  }
+  .activeLink {
+    background-color: var(--cQ-tertiary);
+    border-radius: 2rem;
+    color: var(--cQ-primary);
+    div.btn span {
+        color: var(--cQ-gray);
+    }
+  }
 
 
 #sidebarMenu {
