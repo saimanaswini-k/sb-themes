@@ -148,7 +148,12 @@ html[data-layout="cQubeDkR"] {
   .sidebaractive .app-side-nav ul li {
     border-radius: 50%;
     width: 4rem;
-    height: 4rem !important;
+    height: 4rem;
+    transition: all 0.3s;
+    &.activeLink:before,
+    &.activeLink:after {
+      display: none;
+    }
     div span {
       display: none;
     }
