@@ -489,5 +489,5 @@ html[data-theme="dark"][data-layout="cQubeDefault"]  {
 }
 
 
-@import url(./theme-dk.scss);
-@import url(./theme-dk-reverse.scss);
+@import 'theme-dk.scss';
+@import 'theme-dk-reverse.scss';
