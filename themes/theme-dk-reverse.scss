@@ -157,7 +157,7 @@ html[data-layout="cQubeDkR"] {
     width: 4rem;
     height: 4rem;
     transition: all 0.3s;
-    padding: 1rem 5rem 1rem 0.5rem !important;
+    padding: 1rem 5.5rem 1rem 0.5rem !important;
     border-radius: 2rem 0 0 2rem;
     &.activeLink:before,
     &.activeLink:after {
@@ -406,10 +406,6 @@ html[data-layout="cQubeDkR"] {
         line-height: normal;
       }
     }
-  }
-
-  sb-cqube-info-card .sb-cQ-card {
-    height: 8.25rem !important;
   }
 
   .sb-cQ-card_2 {
