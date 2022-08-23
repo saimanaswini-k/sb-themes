@@ -1,9 +1,9 @@
 html[data-theme="JOYFUL"][data-color="aqua"]{
 
   $blue: #86d1d1;
-  $primary-color:#86d1d1 !important;//#b2e0ff
+  $primary-color:#86d1d1;//#b2e0ff
 
-    --app-primary:#86d1d1; //material 500 value
+    --app-primary:#86d1d1 !important; //material 500 value
     --app-primary-contrast:#000000;
     --app-primary-shade: #77baba; // material 800
     --app-primary-tint: #97e9e9; // material 100
