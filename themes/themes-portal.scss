@@ -428,10 +428,14 @@ html[layout='joy'] {
 		background: var(--white);
 		border-radius: 50% !important;
 		box-shadow: var(--sbt-box-shadow-6px) !important;
-		min-width: auto !important;
-		padding: calculateRem(16px) !important;
-		height: auto !important;
-		width: auto !important;
+		min-width: 3rem !important;
+		padding: calculateRem(8px) !important;
+		height: 3rem !important;
+		width: 3rem !important;
+		&.sb-btn-normal {
+            height: 3rem !important;
+            width: 3rem !important;
+        }
 
 		span {
 			display: none;
