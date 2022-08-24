@@ -432,11 +432,6 @@ html[layout='joy'] {
 		padding: calculateRem(8px) !important;
 		height: 3rem !important;
 		width: 3rem !important;
-		&.sb-btn-normal {
-            height: 3rem !important;
-            width: 3rem !important;
-        }
-
 		span {
 			display: none;
 		}
