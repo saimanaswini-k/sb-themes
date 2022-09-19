@@ -130,7 +130,7 @@ body::before {
   background-color: transparent !important;
   background-repeat: no-repeat;
   background-position: left center;
-  background-image: url(assets/imgs/left-object.svg); // image has to passed on configuration
+  // background-image: url(assets/imgs/left-object.svg); // image has to passed on configuration
   background-size: contain;
   position: absolute;
   left: -10%;
@@ -145,7 +145,7 @@ body::after {
   background-color: transparent !important;
   background-repeat: no-repeat;
   background-position: center center;
-  background-image: url(/assets/imgs/right-object.svg); // image has to passed on configuration
+  // background-image: url(/assets/imgs/right-object.svg); // image has to passed on configuration
   background-size: contain;
   position: absolute;
   right: -20%;
