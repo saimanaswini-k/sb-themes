@@ -3,10 +3,190 @@
     @return #{$remSize}rem;
 }
 
-// Tab
+
+html[data-theme='Default'] {
+
+    // Material Tabs
+    --mat-tab-labels-bg: var(--white);
+
+    // Material Tooltip
+    --mat-tooltip-text: var(--gray-800);
+
+    // Material Accordion
+    --mat-accordion-expansion-panel-bg: var(--white);
+    --mat-accordion-expansion-panel-header-bg: var(--white);
+    --mat-accordion-expansion-panel-body-bg: var(--primary-0);
+
+    // accordion
+    --sb-mat-accordion-bg: var(--white);
+
+    // Tab Group inside Accordion variables
+    --mat-accordion-tab-label-bg: var(--white);
+    --mat-accordion-tab-body-active-bg: var(--white);
+    --mat-accordion-tabs-label-active-after-bg: var(--white);
+
+    // Datepicker
+    --mat-datepicker-form-bg: var(--white);
+    --mat-datepicker-calender-bg: var(--white);
+    --mat-datepicker-calender-body-selected-txt: var(--white);
+
+    // Material Modals(Dialog)
+    --mat-modal-title-bg: var(--primary-color);
+    --mat-modal-content-bg: var(--white);
+
+    // Material Select
+    --mat-dropdown-form-bg: var(--white);
+
+    .sb-mat {
+        &__accordion.mat-accordion {
+            .mat-expansion-panel {
+                border-radius: calculateRem(4px);
+            }
+        }
+    }
+
+}
+
+html[data-theme='Default'][layout='joy'] {
+
+    --sbfaq-compt-bg: #e9e8d9;
+
+    // accordion
+    --sb-mat-accordion-bg: var(--sbfaq-compt-bg);
+}
+
+html[layout='joy'] {
+
+    --mat-tab-labels-bg: var(--sbt-body-bg2);
+    --mat-accordion-tab-body-active-bg: var(--sbt-body-bg);
+    --mat-accordion-tab-label-bg: var(--sbt-body-bg);
+
+    // Material Accordion
+    --mat-accordion-tabs-label-active-after-bg: var(--sbt-body-bg);
+
+    // accordion
+    --sb-mat-accordion-bradius: 1.5rem;
+    --sb-mat-accordion-bg: var(--sbt-body-bg);
+
+    .mat-tab__usage-report {
+        .mat-tab-header {
+            border-radius: calculateRem(16px);
+        }
+    }
+
+    .sb-mat {
+        &__accordion.mat-accordion {
+            .mat-expansion-panel {
+                border-radius: var(--sbt-bradius-24);
+                box-shadow: none;
+                border: none;
+            }
+        }
+    }
+
+    .sb-mat__dropdown.sb-mat__dropdown--autocmp.mat-form-field-appearance-fill .mat-form-field-flex {
+        padding: 0px 0.75rem 0 1rem;
+        background: transparent;
+    }
+
+    // Material Modal inside joy layout
+    .cdk-overlay-container .cdk-global-overlay-wrapper .mat-dialog-container {
+        border-radius: 24px;
+
+        .sb-mat__modal {
+            .mat-dialog-title {
+                padding: calculateRem(16px) calculateRem(24px) 0 calculateRem(24px);
+                border-top-left-radius: calculateRem(24px);
+                border-top-right-radius: calculateRem(24px);
+            }
+
+            &__actions {
+                border: none;
+                padding: 0 calculateRem(16px) calculateRem(24px) calculateRem(16px);
+                border-bottom-left-radius: calculateRem(24px);
+                border-bottom-right-radius: calculateRem(24px);
+            }
+
+            .close-btn {
+                background: var(--white);
+                width: calculateRem(24px);
+                height: calculateRem(24px);
+                border-radius: 50%;
+                box-shadow: var(--sbt-box-shadow-3px);
+
+                &::after {
+                    color: var(--red);
+                }
+            }
+        }
+    }
+}
+
+html[data-theme='Darkmode'] {
+
+    --gray-222: #222;
+
+    // accordion
+    --sb-mat-accordion-bg: var(--sbt-body-bg);
+
+    // Tab Group inside Accordion variables
+    --mat-accordion-tab-label-bg: var(--gray-222);
+    --mat-accordion-tab-body-active-bg: var(--gray-222);
+    --mat-accordion-tabs-label-active-after-bg: var(--gray-222);
+
+    // Datepicker
+    --mat-datepicker-form-bg: var(--gray-222);
+    --mat-datepicker-calender-bg: var(--gray-222);
+    --mat-datepicker-calender-body-selected-txt: var(--gray);
+
+    // Material Modals(Dialog)
+    --mat-modal-title-txt: var(--white);
+    --mat-modal-content-txt: var(--white);
+
+    // Material Dropdown
+    --mat-dropdown-form-bg: var(--gray-222);
+
+    // Material Tabs
+    .mat-tab__usage-report,
+    mat-tab-group {
+        canvas {
+            filter: invert(1);
+        }
+    }
+
+    .mat-calendar-arrow {
+        filter: invert(1);
+    }
+}
+
+html[layout='joy'],
+html[data-theme='Darkmode'] {
+
+    // Material Tabs
+    --mat-tab-labels-bg: var(--sbt-body-bg2);
+
+    // Material Accordion
+    --mat-accordion-expansion-panel-bg: var(--sbt-compt-bg);
+    --mat-accordion-expansion-panel-header-bg: var(--sbt-compt-bg);
+    --mat-accordion-expansion-panel-body-bg: var(--sbt-compt-bg);
+
+    // Material Modals(Dialog)
+    --mat-modal-title-bg: var(--sbt-compt-bg);
+    --mat-modal-content-bg: var(--sbt-compt-bg);
+}
+
+html[data-theme='Default'],
+html[layout='joy'] {
+
+    // Material Modals(Dialog)
+    --mat-modal-title-txt: var(--sb-modal-header-text);
+    --mat-modal-content-txt: var(--gray-800);
+}
+
+/* Material Tab starts here */
 .mat-tab-group.mat-primary .mat-ink-bar,
 .mat-tab-nav-bar.mat-primary .mat-ink-bar {
-    background-color: var(--mat-ink-bar-bg);
+    background-color: var(--primary-color);
 }
 
 .mat-tab__usage-report {
@@ -14,7 +194,7 @@
         background: var(--mat-tab-labels-bg);
 
         .mat-tab-label {
-            color: var(--mat-tab-label-text);
+            color: var(--gray-800);
         }
     }
 }
@@ -25,6 +205,8 @@
         opacity: 1;
     }
 }
+
+/* Material Tab ends here */
 
 /* Tab Group inside Accordion starts here */
 mat-tab-group.sb-mat__tab {
@@ -37,7 +219,7 @@ mat-tab-group.sb-mat__tab {
         .mat-tab-body {
             &.mat-tab-body-active {
                 background: var(--mat-accordion-tab-body-active-bg);
-                border: 1px solid var(--mat-accordion-tab-border-bg);
+                border: 1px solid var(--gray-100);
                 border-top: none;
                 padding: calculateRem(16px);
             }
@@ -61,23 +243,23 @@ mat-tab-group.sb-mat__tab {
 
         .mat-tab-labels {
             &::after {
-                height: 1px;
-                background: var(--mat-accordion-tabs-label-after-bg);
+                height: calculateRem(1px);
+                background: var(--gray-100);
             }
         }
 
         .mat-tab-label {
-            color: var(--mat-accordion-tab-label-text);
+            color: var(--gray-800);
             opacity: 1;
 
             &.mat-tab-label-active {
                 background: var(--mat-accordion-tab-label-bg);
-                border: 1px solid var(--mat-accordion-tab-border-bg);
+                border: 1px solid var(--gray-100);
                 border-bottom: none;
                 z-index: 1;
 
                 &::after {
-                    height: 2px;
+                    height: calculateRem(2px);
                     background: var(--mat-accordion-tabs-label-active-after-bg);
                 }
             }
@@ -102,7 +284,7 @@ mat-tab-group.sb-mat__tab {
 .mat-slide-toggle {
 
     .mat-slide-toggle-bar {
-        background-color: var(--mat-slide-toggle-bar);
+        background-color: var(--gray-300);
         height: calculateRem(24px);
         width: calculateRem(56px);
         border-radius: calculateRem(16px);
@@ -120,7 +302,7 @@ mat-tab-group.sb-mat__tab {
 
     &.mat-checked {
         .mat-slide-toggle-bar {
-            background-color: var(--mat-slide-toggle-bar-active);
+            background-color: var(--primary-color);
 
             .mat-slide-toggle-thumb-container {
                 transform: translate3d(calculateRem(32px), 0, 0);
@@ -129,7 +311,7 @@ mat-tab-group.sb-mat__tab {
 
         .mat-slide-toggle-thumb,
         .mat-ripple-element {
-            background-color: var(--mat-slide-toggle-thumb-active);
+            background-color: var(--white);
         }
     }
 }
@@ -149,7 +331,7 @@ mat-tooltip-component .mat-tooltip {
 
         .mat-expansion-panel {
             background: var(--mat-accordion-expansion-panel-bg);
-            color: var(--mat-accordion-expansion-panel-text);
+            color: var(--gray-800);
             margin-bottom: calculateRem(8px);
             border: .5px solid var(--primary-300);
             box-shadow: 0 .1875rem .25rem 0 rgba(var(--rc-rgba-primary), .1) !important;
@@ -166,12 +348,12 @@ mat-tooltip-component .mat-tooltip {
             background: var(--mat-accordion-expansion-panel-header-bg) !important;
 
             .mat-expansion-panel-header-title {
-                color: var(--mat-accordion-title-text);
+                color: var(--primary-color);
             }
 
             .mat-expansion-indicator::after {
                 border-width: 0 calculateRem(3px) calculateRem(3px) 0;
-                color: var(--mat-accordion-expansion-indicator-bg);
+                color: var(--primary-color);
             }
         }
 
@@ -254,14 +436,14 @@ mat-tooltip-component .mat-tooltip {
         .mat-form-field-flex {
             padding: 0;
             flex-direction: row-reverse;
-            border-radius: 4px;
+            border-radius: calculateRem(4px);
             align-items: center;
             background-color: var(--mat-datepicker-form-bg);
             border: 1px solid var(--gray-200);
             height: 3rem;
 
             html[layout='joy'] & {
-                border-radius: 24px;
+                border-radius: calculateRem(24px);
             }
         }
 
@@ -271,9 +453,10 @@ mat-tooltip-component .mat-tooltip {
 
         // Datepicker form without label
         &.sb-mat__datepicker--nolabel {
-            .mat-form-field-flex { 
+            .mat-form-field-flex {
                 height: auto;
             }
+
             .mat-form-field-infix {
                 border-top: none;
             }
@@ -289,7 +472,7 @@ mat-tooltip-component .mat-tooltip {
     background-color: var(--mat-datepicker-calender-bg);
     color: var(--gray-800);
     border: 1px solid var(--gray-200);
-    border-radius: 4px;
+    border-radius: calculateRem(4px);
 }
 
 .mat-calendar-body-cell-content.mat-calendar-body-selected {
@@ -329,7 +512,7 @@ mat-tooltip-component .mat-tooltip {
 
     .mat-dialog-container {
         padding: 0;
-        border-radius: 4px;
+        border-radius: calculateRem(4px);
         overflow: hidden;
         background-color: transparent;
         box-shadow: none;
@@ -361,7 +544,7 @@ mat-tooltip-component .mat-tooltip {
     }
 
     .sb-mat__modal {
-        max-width: 720px;
+        max-width: calculateRem(720px);
         width: 100%;
         margin: 2% auto 0 auto;
 
@@ -379,7 +562,7 @@ mat-tooltip-component .mat-tooltip {
         }
 
         &__content {
-            padding: 16px;
+            padding: calculateRem(16px);
             max-height: 400px;
             min-height: 100px;
             background: var(--mat-modal-content-bg);
@@ -394,8 +577,8 @@ mat-tooltip-component .mat-tooltip {
             background-color: var(--mat-modal-content-bg);
             border-top: 0.5px solid var(--gray-100);
             justify-content: flex-end;
-            border-bottom-left-radius: 4px;
-            border-bottom-right-radius: 4px;
+            border-bottom-left-radius: calculateRem(4px);
+            border-bottom-right-radius: calculateRem(4px);
 
             html[layout='joy'] & {
                 border: none;
@@ -407,14 +590,14 @@ mat-tooltip-component .mat-tooltip {
             color: var(--mat-modal-title-txt);
             display: flex;
             align-items: center;
-            padding: 4px 16px;
+            padding: calculateRem(4px) calculateRem(16px);
             margin: 0;
-            min-height: 40px;
-            border-top-left-radius: 4px;
-            border-top-right-radius: 4px;
+            min-height: calculateRem(40px);
+            border-top-left-radius: calculateRem(4px);
+            border-top-right-radius: calculateRem(4px);
 
             .title {
-                font-size: 16px;
+                font-size: calculateRem(16px);
                 font-weight: 700;
                 flex: 1;
             }
@@ -436,7 +619,7 @@ mat-tooltip-component .mat-tooltip {
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                font-size: 16px;
+                font-size: calculateRem(16px);
                 font-weight: 700;
             }
         }
@@ -464,13 +647,13 @@ mat-tooltip-component .mat-tooltip {
 .sb-mat__modal.sb-mat__modal--course-complete {
     .sb-mat__modal__content {
         position: relative;
-        border-radius: 24px;
+        border-radius: calculateRem(24px);
     }
 
     .close-btn {
         position: absolute;
-        right: 8px;
-        top: 8px;
+        right: calculateRem(8px);
+        top: calculateRem(8px);
     }
 }
 
@@ -488,9 +671,11 @@ mat-tooltip-component .mat-tooltip {
             .mat-form-field-flex {
                 align-items: flex-end;
             }
+
             .mat-select {
                 margin-top: 2px;
             }
+
             .mat-select-arrow-wrapper {
                 transform: translateY(-30%);
             }
@@ -542,6 +727,7 @@ mat-tooltip-component .mat-tooltip {
         .mat-form-field-label {
             color: var(--gray-800);
             margin-bottom: 0;
+
             &.mat-form-field-empty {
                 transform: translateY(6px);
             }
@@ -601,6 +787,7 @@ mat-tooltip-component .mat-tooltip {
                 .mat-form-field-flex {
                     align-items: center;
                 }
+
                 .mat-select-arrow-wrapper {
                     transform: translateY(0%);
                 }
@@ -620,7 +807,7 @@ mat-tooltip-component .mat-tooltip {
             }
 
             .mat-select {
-                font-size: 16px;
+                font-size: calculateRem(16px);
             }
 
             .mat-select-arrow {
@@ -639,7 +826,7 @@ mat-tooltip-component .mat-tooltip {
     background: var(--mat-dropdown-form-bg);
 
     html[layout='joy'] & {
-        border-radius: 24px;
+        border-radius: calculateRem(24px);
     }
 
     &.mat-primary {
@@ -669,8 +856,10 @@ mat-tooltip-component .mat-tooltip {
                         }
                     }
                 }
+
                 &.mat-dropdown__options--language {
                     color: var(--secondary-color);
+
                     span::before {
                         border-bottom-color: var(--secondary-color);
                         border-right-color: var(--secondary-color);
@@ -690,10 +879,12 @@ mat-tooltip-component .mat-tooltip {
 }
 
 .mat-autocomplete-panel {
-	background: var(--mat-dropdown-form-bg);
-	color: var(--gray-800);
-	.mat-option {
+    background: var(--mat-dropdown-form-bg);
+    color: var(--gray-800);
+
+    .mat-option {
         color: var(--gray-800);
+
         &.mat-selected {
             &:not(.mat-active) {
                 &:not(:hover) {
@@ -708,12 +899,12 @@ mat-tooltip-component .mat-tooltip {
 }
 
 .mat-option.mat-selected {
-	&:not(.mat-option-multiple) {
-		&:not(.mat-option-disabled) {
-			background: var(--mat-dropdown-form-bg);
-			color: var(--gray-800);
-		}
-	}
+    &:not(.mat-option-multiple) {
+        &:not(.mat-option-disabled) {
+            background: var(--mat-dropdown-form-bg);
+            color: var(--gray-800);
+        }
+    }
 }
 
 .sb-mat__dropdown.sb-mat__dropdown--autocmp.mat-form-field-appearance-fill .mat-form-field-infix {
@@ -728,212 +919,4 @@ mat-tooltip-component .mat-tooltip {
     height: 2.5rem;
 }
 
-html[layout="joy"] {
-    .sb-mat__dropdown.sb-mat__dropdown--autocmp.mat-form-field-appearance-fill .mat-form-field-flex {
-        padding: 0px 0.75rem 0 1rem;
-        background: transparent;
-    }
-}
-
 /* Material Select ends here */
-
-
-html[data-theme='Default'] {
-
-    // Material Tabs
-    --mat-ink-bar-bg: var(--primary-color);
-    --mat-tab-labels-bg: var(--white);
-    --mat-tab-label-text: var(--gray-800);
-
-    // Material Toggle
-    --mat-slide-toggle-bar: var(--gray-300);
-    --mat-slide-toggle-bar-active: var(--primary-color);
-    --mat-slide-toggle-thumb-active: var(--white);
-
-    // Material Tooltip
-    --mat-tooltip-text: var(--gray-800);
-
-    // Material Accordion
-    --mat-accordion-expansion-panel-bg: var(--white);
-    --mat-accordion-expansion-panel-text: var(--gray-800);
-    --mat-accordion-title-text: var(--primary-color);
-    --mat-accordion-expansion-panel-header-bg: var(--white);
-    --mat-accordion-expansion-panel-body-bg: var(--primary-0);
-    --mat-accordion-expansion-indicator-bg: var(--primary-color);
-
-    // accordion
-    --sb-mat-accordion-bg: #fff;
-
-    // Tab Group inside Accordion variables
-    --mat-accordion-tab-label-text: var(--gray-800);
-    --mat-accordion-tab-label-bg: var(--white);
-    --mat-accordion-tab-border-bg: var(--gray-100);
-    --mat-accordion-tab-body-active-bg: var(--white);
-    --mat-accordion-tab-border-bg: var(--gray-100);
-    --mat-accordion-tabs-label-after-bg: var(--gray-100);
-    --mat-accordion-tabs-label-active-after-bg: var(--white);
-
-    // Datepicker
-    --mat-datepicker-form-bg: var(--white);
-    --mat-datepicker-calender-bg: var(--white);
-    --mat-datepicker-calender-body-selected-txt: var(--white);
-
-    // Material Modals(Dialog)
-    --mat-modal-title-bg: var(--primary-color);
-    --mat-modal-title-txt: var(--sb-modal-header-text);
-    --mat-modal-content-bg: var(--white);
-    --mat-modal-content-txt: var(--gray-800);
-
-    // Material Select
-    --mat-dropdown-form-bg: var(--white);
-
-    .sb-mat {
-        &__accordion.mat-accordion {
-            .mat-expansion-panel {
-                border-radius: calculateRem(4px);
-            }
-        }
-    }
-
-}
-
-html[data-theme='Default'][layout='joy'] {
-
-    --sbfaq-compt-bg: #e9e8d9;
-
-    // accordion
-    --sb-mat-accordion-bg: var(--sbfaq-compt-bg);
-}
-
-html[layout='joy'] {
-
-    --mat-tab-labels-bg: var(--sbt-body-bg2);
-
-    --mat-accordion-tab-body-active-bg: var(--sbt-body-bg);
-    --mat-accordion-tab-label-bg: var(--sbt-body-bg);
-
-    --mat-accordion-tabs-label-after-bg: var(--mat-accordion-tab-border-bg);
-    --mat-accordion-tabs-label-active-after-bg: var(--sbt-body-bg);
-
-    // Material Accordion
-    --mat-accordion-expansion-panel-bg: var(--sbt-compt-bg);
-    --mat-accordion-expansion-panel-header-bg: var(--sbt-compt-bg);
-    --mat-accordion-expansion-panel-body-bg: var(--sbt-compt-bg);
-
-    // accordion
-    --sb-mat-accordion-bradius: 1.5rem;
-    --sb-mat-accordion-bg: var(--sbt-body-bg);
-
-    // Material Modals(Dialog)
-    --mat-modal-title-bg: var(--sbt-compt-bg);
-    --mat-modal-title-txt: var(--sb-modal-header-text);
-    --mat-modal-content-bg: var(--sbt-compt-bg);
-    --mat-modal-content-txt: var(--gray-800);
-
-    .mat-tab__usage-report {
-        .mat-tab-header {
-            border-radius: calculateRem(16px);
-        }
-    }
-
-    .sb-mat {
-        &__accordion.mat-accordion {
-            .mat-expansion-panel {
-                border-radius: var(--sbt-bradius-24);
-                box-shadow: none;
-                border: none;
-            }
-        }
-    }
-
-    // Material Modal inside joy layout
-    .cdk-overlay-container .cdk-global-overlay-wrapper .mat-dialog-container {
-        border-radius: 24px;
-
-        .sb-mat__modal {
-            .mat-dialog-title {
-                padding: 16px 24px 0 24px;
-                border-top-left-radius: 24px;
-                border-top-right-radius: 24px;
-            }
-
-            &__actions {
-                border: none;
-                padding: 0 16px 24px 16px;
-                border-bottom-left-radius: 24px;
-                border-bottom-right-radius: 24px;
-            }
-
-            .close-btn {
-                background: var(--white);
-                width: 24px;
-                height: 24px;
-                border-radius: 50%;
-                box-shadow: var(--sbt-box-shadow-3px);
-
-                &::after {
-                    color: var(--red);
-                }
-            }
-        }
-    }
-}
-
-html[data-theme=Darkmode] {
-
-    // Material Tabs
-    --mat-ink-bar-bg: var(--primary-color);
-    --mat-tab-labels-bg: var(--sbt-body-bg2);
-    --mat-tab-label-text: var(--gray-800);
-
-    // Material Toggle
-    --mat-slide-toggle-bar: var(--gray-300);
-    --mat-slide-toggle-bar-active: var(--primary-color);
-    --mat-slide-toggle-thumb-active: var(--white);
-
-    // Material Accordion
-    --mat-accordion-expansion-panel-bg: var(--sbt-compt-bg);
-    --mat-accordion-expansion-panel-text: var(--gray-800);
-    --mat-accordion-title-text: var(--primary-color);
-    --mat-accordion-expansion-panel-header-bg: var(--sbt-compt-bg);
-    --mat-accordion-expansion-panel-body-bg: var(--sbt-compt-bg);
-    --mat-accordion-expansion-indicator-bg: var(--primary-color);
-
-    // accordion
-    --sb-mat-accordion-bg: var(--sbt-body-bg);
-
-    // Tab Group inside Accordion variables
-    --mat-accordion-tab-label-text: var(--gray-800);
-    --mat-accordion-tab-label-bg: #222;
-    --mat-accordion-tab-border-bg: var(--gray-100);
-    --mat-accordion-tab-body-active-bg: #222;
-    --mat-accordion-tab-border-bg: var(--gray-100);
-    --mat-accordion-tabs-label-after-bg: var(--gray-100);
-    --mat-accordion-tabs-label-active-after-bg: #222;
-
-    // Datepicker
-    --mat-datepicker-form-bg: #222;
-    --mat-datepicker-calender-bg: #222;
-    --mat-datepicker-calender-body-selected-txt: var(--gray);
-
-    // Material Modals(Dialog)
-    --mat-modal-title-bg: var(--sbt-compt-bg);
-    --mat-modal-title-txt: var(--white);
-    --mat-modal-content-bg: var(--sbt-compt-bg);
-    --mat-modal-content-txt: var(--white);
-
-    // Material Dropdown
-    --mat-dropdown-form-bg: #222;
-
-    // Material Tabs
-    .mat-tab__usage-report,
-    mat-tab-group {
-        canvas {
-            filter: invert(1);
-        }
-    }
-
-    .mat-calendar-arrow {
-        filter: invert(1);
-    }
-}
