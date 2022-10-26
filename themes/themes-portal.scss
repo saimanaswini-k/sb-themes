@@ -30,11 +30,7 @@ html[data-theme='Default'] {
 	--sbt-pill-text: #000000;
 	--sbt-pill-text-hover: #ffffff;
 	--sbt-compt-bg: #E9E8D9;
-	--sbt-bradius: 0.125rem;
-	--sbt-bradius-8: calc(var(--sbt-bradius) * 4);
-	--sbt-bradius-16: calc(var(--sbt-bradius) * 8);
-	--sbt-bradius-24: calc(var(--sbt-bradius) * 12);
-	--sbt-bradius-32: calc(var(--sbt-bradius) * 16);
+
 	--sb-container-bg: var(--white);
 
 	--sbt-badge-bg: var(--rc-d4d3d3);
@@ -256,11 +252,7 @@ html[layout='joy'] {
 	--sbt-language-dropdown-item-hover-bg: rgba(0, 0, 0, .05);
 	--sbt-language-dropdown-item-hover-text: #008840;
 	--sb-profile-bg-c-4: var(--sbt-body-bg);
-	--sbt-bradius: 0.125rem;
-	--sbt-bradius-8: calc(var(--sbt-bradius) * 4);
-	--sbt-bradius-16: calc(var(--sbt-bradius) * 8);
-	--sbt-bradius-24: calc(var(--sbt-bradius) * 12);
-	--sbt-bradius-32: calc(var(--sbt-bradius) * 16);
+
 	//Modal
 	--sb-modal-header-text: var(--black);
 	--sb-modal-content-bg: var(--sbt-compt-bg);
@@ -1433,11 +1425,6 @@ html[data-theme=Darkmode] {
 	--sbt-pill-text-hover: #222222;
 	--sbt-compt-bg: #333333;
 	--gray-800: #ffffff;
-	--sbt-bradius-8: calc(var(--sbt-bradius) * 4);
-	--sbt-bradius-16: calc(var(--sbt-bradius) * 8);
-	--sbt-bradius-24: calc(var(--sbt-bradius) * 12);
-	--sbt-bradius-32: calc(var(--sbt-bradius) * 16);
-
 
 	--sbfield-label-text: var(--gray-100);
 
@@ -3226,4 +3213,14 @@ html[accessable-theme="accessible"] {
 		color: #595959;
 	}
 
+}
+
+html[data-theme='Default'],
+html[layout='joy'],
+html[data-theme=Darkmode] {
+	--sbt-bradius: 0.125rem;
+	--sbt-bradius-8: calc(var(--sbt-bradius) * 4);
+	--sbt-bradius-16: calc(var(--sbt-bradius) * 8);
+	--sbt-bradius-24: calc(var(--sbt-bradius) * 12);
+	--sbt-bradius-32: calc(var(--sbt-bradius) * 16);
 }
