@@ -6,15 +6,11 @@
 html[data-theme='Default'] {
 	--primary-theme: var(--primary-color);
 	--sbt-body-bg: #E5EDF5;
-	--sbt-header-bg: var(--primary-300); //var(--primary-300);
-	--sbt-menu-bg: var(--sbt-header-bg);
-	--sbt-page-header-bg: var(--sbt-menu-bg);
 	--sbt-body-bg2: #f3f3e5;
+	--sbt-header-bg: var(--primary-300); //var(--primary-300);
 	--sbt-filter-bar-bg: var(--white);
 	--sbt-box-shadow-black: rgba(0, 0, 0, 0.1);
-	--sbt-box-shadow-6px: 0.375rem 0.375rem 0.125rem 0 var(--sbt-box-shadow-black);
-	--sbt-box-shadow-3px: 0.1875rem 0.1875rem 0.125rem 0 var(--sbt-box-shadow-black);
-	--sbt-box-shadow: rgba(128, 167, 206, 1);
+
 	--sbt-footer-bg: #ffffff;
 	--sbt-theme-purple-selectbox: #6841B3;
 	--sbt-theme-green-selectbox: #008840;
@@ -34,7 +30,7 @@ html[data-theme='Default'] {
 	--sb-container-bg: var(--white);
 
 	--sbt-badge-bg: var(--rc-d4d3d3);
-	--sbt-badge-text: var(--gray-800);
+
 	--sbfield-label-text: var(--gray-800);
 	--sbt-sidemenu-overlay-bg: 0, 0, 0;
 	--sbt-sidemenu-bg: var(--white);
@@ -1396,20 +1392,17 @@ html[data-theme=Darkmode] {
 	--primary-800: #ffb62a; // hover
 	--secondary-200: #ffd92a;
 	--secondary-color: #ffd92a;
+	--gray-800: var(--white);
 	--sbt-primary-bg: var(--primary-theme);
 	--sbt-border-chapter: #E4E8EE;
 	--sbt-body-bg: #000000;
 	--sbt-body-bg2: #333 !important;
 	--sbt-header-bg: #333333;
 	--sbt-filter-bar-bg: #333;
-	--sbt-menu-bg: var(--sbt-header-bg);
-	--sbt-page-header-bg: var(--sbt-menu-bg);
 	--sb-container-bg: var(--black);
 	--sbt-footer-bg: #333333;
 	--sbt-box-shadow-black: rgba(0, 0, 0, 0.2);
-	--sbt-box-shadow-6px: 0.375rem 0.375rem 0.125rem 0 var(--sbt-box-shadow-black);
-	--sbt-box-shadow-3px: 0.1875rem 0.1875rem 0.125rem 0 var(--sbt-box-shadow-black);
-	--sbt-box-shadow: rgba(128, 167, 206, 1);
+
 	--sbt-theme-purple-selectbox: #ffffff;
 	--sbt-theme-green-selectbox: #ffffff;
 	--sbt-theme-blue-selectbox: #ffffff;
@@ -1424,13 +1417,11 @@ html[data-theme=Darkmode] {
 	--sbt-pill-text: #ffffff;
 	--sbt-pill-text-hover: #222222;
 	--sbt-compt-bg: #333333;
-	--gray-800: #ffffff;
 
 	--sbfield-label-text: var(--gray-100);
 
 	// new styles
 	--sbt-badge-bg: #222222;
-	--sbt-badge-text: #ffffff;
 	--sbt-sidemenu-overlay-bg: 34, 34, 34;
 	--sbt-sidemenu-bg: #333333;
 	--sidebar-profil-header-bg: #222222;
@@ -3216,11 +3207,25 @@ html[accessable-theme="accessible"] {
 }
 
 html[data-theme='Default'],
+html[data-theme=Darkmode] {
+
+	--sbt-box-shadow-6px: 0.375rem 0.375rem 0.125rem 0 var(--sbt-box-shadow-black);
+	--sbt-box-shadow-3px: 0.1875rem 0.1875rem 0.125rem 0 var(--sbt-box-shadow-black);
+	--sbt-box-shadow: rgba(128, 167, 206, 1);
+
+	--sbt-badge-text: var(--gray-800);
+}
+
+html[data-theme='Default'],
 html[layout='joy'],
 html[data-theme=Darkmode] {
+
+	--sbt-page-header-bg: var(--sbt-header-bg);
+
 	--sbt-bradius: 0.125rem;
 	--sbt-bradius-8: calc(var(--sbt-bradius) * 4);
 	--sbt-bradius-16: calc(var(--sbt-bradius) * 8);
 	--sbt-bradius-24: calc(var(--sbt-bradius) * 12);
 	--sbt-bradius-32: calc(var(--sbt-bradius) * 16);
+
 }
