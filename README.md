@@ -10,7 +10,7 @@
     <td>0.0.84</td>
   </tr>
   <tr>
-    <td><b>Latest Features</b>(use sass above 1.34.0)</td>
+    <td><b>Latest Features</b>(Compatibility with Dart Sass)</td>
     <td>0.0.88</td>
   </tr>
 </table>
