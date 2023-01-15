@@ -6,7 +6,7 @@
     <td colspan="2"><b>Available versions</b></td>
   </tr>
   <tr>
-    <td><b>Standard Version</b></td>
+    <td><b>Recommended Version</b></td>
     <td>0.0.84</td>
   </tr>
   <tr>
