@@ -1,3 +1,5 @@
+@use 'theme-dk.scss';
+@use 'theme-dk-reverse.scss';
 html[data-theme="light"][data-layout="cQubeDefault"]  {
   --cQ-theme-bg: #eef2fb;
   --cQ-theme-bg-shade: #dbe7ff;
@@ -487,11 +489,4 @@ html[data-theme="dark"][data-layout="cQubeDefault"]  {
 //   background-color: #c8d3eb;
 //   border: 0.125rem solid #c8d3eb;
 // }
-@use 'sass:math'; // Import the math module first
-@use 'theme-dk';
 
-// Other variables and styles go here
-
-
-@use 'theme-dk.scss';
-@use 'theme-dk-reverse.scss';
