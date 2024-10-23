@@ -4,8 +4,10 @@
   "description": "Sunbird project application themes",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "lint": "eslint .",
+"build": "sass themes:themes/assets/css/main.css"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sunbird-Ed/sb-themes.git"
@@ -22,5 +24,12 @@
   },
   "homepage": "https://github.com/Sunbird-Ed/sb-themes.git#readme",
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^9.13.0",
+    "sass": "^1.80.3"
+  },
+  "dependencies": {
+    "stylelint": "^16.10.0"
+  }
 }
