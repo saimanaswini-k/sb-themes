@@ -2568,5 +2568,5 @@ html[device-accessable-theme="accessible"][data-mode="DARKMODE"] {
   }
 }
 
-@import './themes-mobile-aqua.scss';
-@import './themes-mobile-inded.scss';
+@use './themes-mobile-aqua.scss';
+@use './themes-mobile-inded.scss';
